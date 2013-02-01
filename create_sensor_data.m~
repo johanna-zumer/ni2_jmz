@@ -126,8 +126,8 @@ ft_topoplotER(cfg,tlock)
 cfg=[];
 cfg.viewmode='vertical';
 ft_databrowser(cfg,tlock)
-
 data.trialclean=data.trial;
+
 noiseadd=10*norm(tlock.trial(:))*randn(size(tlock.trial));
 data.trial=data.trialclean+noiseadd;
 
