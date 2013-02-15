@@ -2,6 +2,10 @@ function ni2_subplot(dat, flag)
 % dat matrix where first dimension indicates how many subplots
 % flag = 1 for plot, flag = 2 for hist
 
+if ~exist('flag','var')
+  flag=1;
+end
+
 factors=factor(size(dat,1));
 
 figure;

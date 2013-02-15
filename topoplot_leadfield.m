@@ -1,4 +1,5 @@
-function topoplot_leadfield(leadfield,indices,channels);
+function topoplot_leadfield(leadfield,indices,channels,layout);
+% function topoplot_leadfield(leadfield,indices,channels);
 
 numind=numel(indices);
 figure;
@@ -10,7 +11,7 @@ for jj=1:numind;
   tlock.label=channels;
   for ii=1:3
     cfg=[];
-    cfg.layout='elec1005';
+    cfg.layout=layout;
     cfg.xlim=[tlock.time(ii) tlock.time(ii)];
     subplot(numind,3,(jj-1)*3+ii);ft_topoplotER(cfg, tlock)
   end
