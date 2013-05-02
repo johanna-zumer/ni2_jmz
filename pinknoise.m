@@ -1,5 +1,5 @@
 function x = pinknoise(Nx,seed)
-% function x = pinknoise(Nx)
+% function x = pinknoise(Nx,seed)
 
 if exist('seed','var')
   ftFuncRandomseed=randomseed(seed);
